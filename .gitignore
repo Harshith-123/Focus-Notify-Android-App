@@ -1,0 +1,19 @@
+# Android
+*.iml
+.gradle/
+local.properties
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# IDE
+.idea/
+*.DS_Store
+
+# Generated
+app/release/

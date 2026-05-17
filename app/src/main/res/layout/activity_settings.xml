@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Participant ID -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Participant ID"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#1a73e8"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/etParticipantId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="e.g. P01, P02, P03 ..."
+            android:background="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Each participant gets a unique ID. Used in the CSV filename."
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- FoMO Score -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FoMO Score (10–50)"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#1a73e8"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/etFomoScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Enter score from FoMO survey (10–50)"
+            android:background="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sum of 10 survey questions × 5 scale. Low FoMO = 10, High FoMO = 50."
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Mode selector -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Study Mode"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#1a73e8"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <RadioButton
+                android:id="@+id/rbBaseline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BASELINE — Deliver everything, just log"
+                android:padding="10dp"
+                android:textSize="14sp"/>
+
+            <RadioButton
+                android:id="@+id/rbBatching"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FIXED BATCHING — Hold all, digest every 30 min"
+                android:padding="10dp"
+                android:textSize="14sp"/>
+
+            <RadioButton
+                android:id="@+id/rbAdaptive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADAPTIVE — Smart per-notification scoring"
+                android:padding="10dp"
+                android:textSize="14sp"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Week 1 = Baseline  |  Week 2 = Fixed Batching  |  Week 3 = Adaptive"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:layout_marginBottom="32dp"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="✅  SAVE SETTINGS"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1a73e8"/>
+
+    </LinearLayout>
+</ScrollView>
